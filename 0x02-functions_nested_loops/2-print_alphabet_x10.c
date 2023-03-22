@@ -1,7 +1,7 @@
 #include "main.h"
 /*#include <unistd.h>*/
 /**
- * print_alphabet - A program that prints 10 times the alphabets in lowercass
+ * print_alphabet_x10 - A program that prints 10 times the alphabets in lowercass
  * Return: nothing
  */
 void print_alphabet_x10(void)
