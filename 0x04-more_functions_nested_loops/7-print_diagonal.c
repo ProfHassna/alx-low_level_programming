@@ -11,11 +11,11 @@ void print_diagonal(int n)
 {
 	int i, j;
 
-	i = 1;
+	i = 0;
 	if (n > 0)
-		while (i <= n)
+		while (i < n)
 		{
-			for (j = 1; j <= i; ++j)
+			for (j = 0; j < i; j++)
 			{
 				_putchar(' ');
 			}
