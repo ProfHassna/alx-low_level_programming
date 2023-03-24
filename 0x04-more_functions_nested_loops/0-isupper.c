@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * _islower - checks for uppercase character
+ * _isupper - checks for uppercase character
  * @c: The character to check
  * Return: 1 (sucess)
  * On error, 0 is returned
