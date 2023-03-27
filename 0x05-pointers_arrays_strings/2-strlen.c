@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * int _strlen - a function that returns the length of a string
+ *_strlen - a function that returns the length of a string
  * @s: param to update
  * Return: nothings.
  */
