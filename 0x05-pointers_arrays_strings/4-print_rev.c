@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * print_rev - a function that prints a string, in reverse followed by a new line
+ * print_rev - a function that prints a string, in reverse
  * @s: param to print
  * Return: nothings.
  */
@@ -16,5 +16,5 @@ void print_rev(char *s)
 	{
 		_putchar(*(s + i));
 	}
-	/*_putchar('\n');*/
+	_putchar('\n');
 }
