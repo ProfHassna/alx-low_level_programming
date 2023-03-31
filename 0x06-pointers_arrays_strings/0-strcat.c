@@ -4,15 +4,23 @@
 
 /**
  * *_strcat - a function that concatenates two strings
- * @*dest: string to append to
- * @*src: string to append
+ * @dest: string to append to
+ * @src: string to append
  * Return: Pointer to the result.
  */
 
 char *_strcat(char *dest, char *src)
 {
-	char *ptr;
+	int i, j;
 
-	ptr = strcat(dest, src);;
-	return (ptr);
+	i = 0;
+	while (dest[i] != '\0')
+		i++;
+	for (j = 0; src[j] != '\0'; j++)
+	{
+		dest[i] = src[j];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
