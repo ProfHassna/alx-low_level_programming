@@ -12,20 +12,20 @@
 char *argstostr(int ac, char **av)
 {
 	char *concat;
-	int i,k = 0, j = 0;
+	int i, k = 0, j = 0;
 	int size = 0;
 
 	if (ac == 0 || av == NULL)
 		return (0);
-	
+
 	for (i = 0; i < ac; i++)
 	{
 		j = 0;
 		while (av[i][j] != 'n')
 			j++;
-		size+= j + 1;
+		size += j + 1;
 	}
-	concat = malloc(sizeof(char *) * size + 1);
+	concat = malloc(sizeof(char) * size + 1);
 
 	if (concat == 0)
 		return (0);
