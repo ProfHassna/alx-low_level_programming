@@ -1,14 +1,14 @@
-#include <stdio.h>
-#include "function_pointers.h"
 #include "3-calc.h"
+#include <stddef.h>
+#include <stdio.h>
 
 /**
- * get_op_func - selects the correct func to perform
- * @s: the operator
+ * get_op_func - Calls function to perform arithmetic operation
+ * between 2 numbers bases on an operator
+ * @s: operator passed as argument to the program
  *
- * Return: A pointer to the func.
+ * Return: Nothing
  */
-
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -19,15 +19,13 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+
 	int i;
 
-	for (i = 0; i < 5; i++)
-	{
-		if (ops[i].op[0] == s[0])
-		{
-			return (ops[i].f);
-		}
-	}
-	return (0);
+	i = 0;
+	while ((ops[i].op[0] != s[0]) && (i < 5))
+		i++;
 
+	return (ops[i].f);
 }
+
