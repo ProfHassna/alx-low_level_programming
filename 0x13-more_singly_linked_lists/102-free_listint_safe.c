@@ -11,29 +11,25 @@
 
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *temp;
-	size_t count = 0;
-	int a = *h - (*h)->next;
+	listint_t *tmp = *h, *tmp2;
+	unsigned int count = 0;
 
-	if (!h || *h)
+	if (tmp == 0 || h == 0)
 		return (0);
-	while (*h)
+
+	tmp = *h;
+	while (tmp != 0)
 	{
-		if (a > 0)
-		{
-			temp = (*h)->next;
-			free(*h);
-			*h = temp;
-			count++;
-		}
-		else
-		{
-			free(*h);
-			*h =  NULL;
-			count++;
+		tmp2 = tmp;
+		tmp = tmp->next;
+		count++;
+
+		free(tmp2);
+
+		if (tmp2 <= tmp)
 			break;
-		}
 	}
-	*h = NULL;
+
+	*h = 0;
 	return (count);
 }
